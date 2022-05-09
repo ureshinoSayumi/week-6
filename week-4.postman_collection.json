@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "9bcc641c-102a-45dc-b4fb-bd57f626abb5",
+		"name": "week-4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://stark-beach-75369.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"stark-beach-75369",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"3\",\r\n    \"email\": \"3\",\r\n    \"photo\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stark-beach-75369.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"stark-beach-75369",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://stark-beach-75369.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"stark-beach-75369",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"6277990dd44862af1949fb5b\",\r\n    \"content\": \"6\",\r\n    \"type\": \"6\",\r\n    \"tags\": \"6\",\r\n    \"image\": \"https://imgur.com\",\r\n    \"likes\": 6,\r\n    \"comments\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stark-beach-75369.herokuapp.com/posts/62792a3267701a7d02706521",
+					"protocol": "https",
+					"host": [
+						"stark-beach-75369",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"62792a3267701a7d02706521"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得所有user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://stark-beach-75369.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"stark-beach-75369",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"6277990dd44862af1949fb5b\",\r\n    \"content\": \"\",\r\n    \"type\": \"6\",\r\n    \"tags\": \"6\",\r\n    \"image\": \"https://imgur.com\",\r\n    \"likes\": 6,\r\n    \"comments\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stark-beach-75369.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"stark-beach-75369",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得貼文 加上filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stark-beach-75369.herokuapp.com/posts?dateSort=-createdAt&content=test",
+					"protocol": "https",
+					"host": [
+						"stark-beach-75369",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "dateSort",
+							"value": "-createdAt"
+						},
+						{
+							"key": "content",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取的單筆",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://stark-beach-75369.herokuapp.com/posts/62792a3267701a7d02706521",
+					"protocol": "https",
+					"host": [
+						"stark-beach-75369",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"62792a3267701a7d02706521"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
