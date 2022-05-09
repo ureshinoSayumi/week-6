@@ -1,5 +1,5 @@
 function errorHandle(res, message='格式錯誤') {
-    res.status(200).json({
+    res.status(400).json({
         'status': 'false',
         'message': message
     })
