@@ -1,15 +1,13 @@
 var express = require('express');
 var router = express.Router();
-const errorHandle = require('../message/errorHandle')
-const sucessHandle = require('../message/sucessHandle')
-const Post = require('../models/post')
 const postController = require('../controllers/post')
+const { isAuth,generateSendJWT } = require('../service/auth');
 
 /* GET users listing. */
-router.get('/', postController.getAllPosts);
-router.get('/:id', postController.getPost);
-router.post('/', postController.createPost);
-router.patch('/:id', postController.updatePost);
-router.delete('/', postController.deleteAllPost);
+router.get('/posts', isAuth, postController.getAllPosts);
+router.get('/post/:id', isAuth, postController.getPost);
+router.post('/post', isAuth, postController.createPost);
+router.patch('/post/:id', isAuth, postController.updatePost);
+router.delete('/posts', isAuth, postController.deleteAllPost);
 
 module.exports = router;
